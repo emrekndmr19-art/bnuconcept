@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Noto+Serif:wght@300;400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary": "#000000",
+                        "secondary-fixed": "#e2e2e2",
+                        "on-tertiary": "#ffffff",
+                        "secondary": "#5d5f5f",
+                        "surface-dim": "#dadada",
+                        "tertiary-fixed-dim": "#c7c6c6",
+                        "on-secondary-fixed": "#1a1c1c",
+                        "on-surface": "#1a1c1c",
+                        "on-primary-fixed": "#1b1b1b",
+                        "tertiary-fixed": "#e3e2e2",
+                        "on-error-container": "#93000a",
+                        "background": "#f9f9f9",
+                        "error": "#ba1a1a",
+                        "inverse-on-surface": "#f1f1f1",
+                        "on-tertiary-fixed-variant": "#464747",
+                        "on-background": "#1a1c1c",
+                        "on-secondary-fixed-variant": "#454747",
+                        "outline": "#7e7576",
+                        "on-primary": "#ffffff",
+                        "primary": "#000000",
+                        "surface-container-highest": "#e2e2e2",
+                        "on-primary-fixed-variant": "#474747",
+                        "inverse-surface": "#2f3131",
+                        "surface-container": "#eeeeee",
+                        "on-tertiary-fixed": "#1b1c1c",
+                        "outline-variant": "#cfc4c5",
+                        "on-surface-variant": "#4c4546",
+                        "primary-fixed": "#e2e2e2",
+                        "secondary-fixed-dim": "#c6c6c7",
+                        "primary-container": "#1b1b1b",
+                        "surface": "#f9f9f9",
+                        "on-tertiary-container": "#848484",
+                        "on-secondary-container": "#616363",
+                        "surface-bright": "#f9f9f9",
+                        "on-error": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "primary-fixed-dim": "#c6c6c6",
+                        "surface-tint": "#5e5e5e",
+                        "secondary-container": "#dfe0e0",
+                        "surface-variant": "#e2e2e2",
+                        "on-secondary": "#ffffff",
+                        "on-primary-container": "#848484",
+                        "tertiary-container": "#1b1c1c",
+                        "inverse-primary": "#c6c6c6",
+                        "surface-container-high": "#e8e8e8",
+                        "surface-container-low": "#f3f3f3",
+                        "surface-container-lowest": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "32px",
+                        "element-gap": "24px",
+                        "container-max": "1440px",
+                        "unit": "8px",
+                        "margin-edge": "64px",
+                        "section-gap": "160px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Inter"],
+                        "headline-lg": ["Noto Serif"],
+                        "body-md": ["Inter"],
+                        "label-caps": ["Inter"],
+                        "caption": ["Inter"],
+                        "display-xl": ["Noto Serif"],
+                        "headline-md": ["Noto Serif"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", {"lineHeight": "1.7", "letterSpacing": "0.01em", "fontWeight": "400"}],
+                        "headline-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.15em", "fontWeight": "600"}],
+                        "caption": ["14px", {"lineHeight": "1.4", "fontWeight": "400"}],
+                        "display-xl": ["84px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "300"}],
+                        "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #f9f9f9;
+            color: #1a1c1c;
+        }
+        .hard-border {
+            border: 1px solid #000000;
+        }
+        .transition-none {
+            transition: none !important;
+        }
+    </style>
+</head>
+<body class="font-body-md text-on-background selection:bg-black selection:text-white">
+<!-- Scroll Progress -->
+<div class="fixed top-0 left-0 w-full h-[1px] bg-black z-[100]"></div>
+<!-- Navigation Shell -->
+<nav class="fixed top-0 w-full z-50 flex justify-between items-center px-16 py-6 h-24 bg-white dark:bg-zinc-950 border-b border-black dark:border-white">
+<div class="text-2xl font-black tracking-[0.2em] text-black dark:text-white font-serif uppercase">
+            ARCHITEXTURE
+        </div>
+<div class="hidden md:flex items-center gap-12">
+<a class="font-serif tracking-tighter uppercase text-sm md:text-base text-black dark:text-white border-b-2 border-black dark:border-white pb-1 transition-none" href="#">PROJECTS</a>
+<a class="font-serif tracking-tighter uppercase text-sm md:text-base text-zinc-500 dark:text-zinc-400 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-none" href="#">SERVICES</a>
+<a class="font-serif tracking-tighter uppercase text-sm md:text-base text-zinc-500 dark:text-zinc-400 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-none" href="#">PHILOSOPHY</a>
+<a class="font-serif tracking-tighter uppercase text-sm md:text-base text-zinc-500 dark:text-zinc-400 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-none" href="#">CONTACT</a>
+</div>
+<button class="bg-black text-white px-8 py-3 font-serif tracking-tighter uppercase text-sm md:text-base hover:bg-white hover:text-black border border-black transition-none">
+            INQUIRE
+        </button>
+</nav>
+<main class="pt-24">
+<!-- Hero Section -->
+<section class="relative w-full h-[921px] flex items-center justify-center overflow-hidden bg-black px-margin-edge">
+<div class="absolute inset-0 opacity-80">
+<img alt="Cinematic architectural detail" class="w-full h-full object-cover grayscale" data-alt="A cinematic, low-angle shot of a minimalist brutalist building featuring sharp concrete edges and deep shadows. The architectural photography is in high-contrast black and white, emphasizing the geometric structure against a clear, pale sky. The mood is authoritative and serene, representing the pinnacle of luxury interior architecture. This visual serves as the central focal point of the minimalist portfolio website." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDE4gvzjH3nQ8oCb-xVRtiKYOhRzR7hlwBKi5GvxW3tv5nWKaHPVZnzeV4eiPkgBQFPvHwJ0VTpD1Sx0Hl-AUSra60DPKnzFqbdCmm-ast3zcrksG32oWVRPYFtxZ9MxdnCHaG31552bVRP0rPNlIJaj1ntpQdpG64ldOyOHFs6xVHimBDPzZn7OhnhA-cJa741EBtdxtjD1UJPvzTQZLFSiV0Rupvdp6Wjw8Erud_T-OTlXdzWe9arkUTw4w9V-3MpCfhcWsbLlI8"/>
+</div>
+<div class="relative z-10 text-center">
+<h1 class="font-display-xl text-display-xl text-white uppercase tracking-[-0.05em]">
+                    THE ART OF SPACE
+                </h1>
+<div class="mt-8 flex justify-center">
+<span class="material-symbols-outlined text-white text-4xl animate-bounce">arrow_downward</span>
+</div>
+</div>
+</section>
+<!-- Portfolio Glimpse (Asymmetric Grid) -->
+<section class="py-section-gap px-margin-edge max-w-container-max mx-auto">
+<div class="grid grid-cols-12 gap-8">
+<div class="col-span-12 md:col-span-7 aspect-[4/5] hard-border overflow-hidden group">
+<img alt="Project Alpha" class="w-full h-full object-cover grayscale transition-transform duration-700 group-hover:scale-110" data-alt="A high-contrast monochrome photograph of a modern residential interior featuring a monolithic marble kitchen island. The lighting is dramatic, with sharp sunlight creating geometric patterns on the polished concrete floor. The aesthetic is strictly minimalist with no clutter, showcasing architectural precision. This image represents the studio's commitment to clean luxury and spatial intentionality." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCYgZGoi-r5cCAV3w3wjL2rsEvt05LwKuPBmJSoqvgvG3CoMHMhfWU4TmRrC_6FqVfAH37rbftuRc0cmPjGp-6HvXukrSm13nNq2DcdCndc0KrYMRN-KUBGMnCLNLW2Sf7-OULMHczYkdRQ5V1Fxu4gZ-HhDzpIzgUkwWFr3FE9-RuOBVs4RIi8xZEEO46UmIkdXosMayMbNWZNjtlJ9AupNzVGLeCSjdEgZILU8vJLYRhpo3JsCMa9Gb76BCJ_Ixg3dQLQTylFic"/>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 flex items-end p-8 transition-opacity">
+<span class="text-white font-label-caps text-label-caps uppercase">01 / RESIDENCE NO. 42</span>
+</div>
+</div>
+<div class="col-span-12 md:col-span-5 flex flex-col gap-8">
+<div class="aspect-square hard-border overflow-hidden group">
+<img alt="Project Beta" class="w-full h-full object-cover grayscale transition-transform duration-700 group-hover:scale-110" data-alt="A minimalist commercial workspace with rhythmic black vertical slats and an expansive glass wall overlooking a monochromatic urban landscape. The composition is strictly linear, following a 12-column grid structure. Soft, diffused lighting fills the space, highlighting the textures of high-end materials. The atmosphere is professional, quiet, and profoundly curated for a design-literate audience." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-vHWX_R_sC64UPkKTqfa2JHD9sX9ehNF_cgVB7O4Q-7fIpMUcOcoR5jUjqOf3zQVFD2EdziHM8q42dnGdGxtbIo5nRMI6VHCUTdxDUi7yRgJBUezc9qjH9PIZTwK1leKArznqoSsJ0mOuJ0uH-SA3UZTR-ba-Mu6hAiSNxmy8wjbi2BnDv_Fp9QXot2m9iivPNUzvmfWqRBTn62y9MwohomtY5mH0h9fVlqoos6HYvVbDGBy1JoGyCXvF7eQ3Lp8-o_4KjNyJlzc"/>
+</div>
+<div class="p-8 hard-border bg-white">
+<h3 class="font-headline-md text-headline-md mb-4 uppercase">CURATED PERSPECTIVE</h3>
+<p class="font-body-md text-body-md text-secondary">Every project is an exercise in restraint. We remove the unnecessary to reveal the essential structure of living.</p>
+</div>
+</div>
+<div class="col-span-12 md:col-span-4 aspect-square hard-border overflow-hidden group">
+<img alt="Project Gamma" class="w-full h-full object-cover grayscale transition-transform duration-700 group-hover:scale-110" data-alt="Detail of a spiral concrete staircase in a stark, white-walled gallery space. The architectural drafting aesthetic is clear in the sharp lines and mathematical precision of the steps. Natural light falls from above, creating a gradient of grays and blacks. The mood is one of quiet luxury, where the structural form itself acts as the primary ornamentation." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfzXeHDetJx31cblVR75b_cain6-zGg_NcfQu3tc-PU58C0RI-LXEdLpMouvSRdM3hpmJIffgYAqsNXSGXbrSNsU4_RACMneVO1MtwU_AStzHLoLjy3ULVBtEk0vMjlI7-Hc9I36zWFoFI0AzfsczlflUIakAsQD_a6pbqf-E2CPE1hBhmikzCR-wYgspXJsL2PUHhFS94ysTEFt_9e6q0yRzpivBRpvXQS178KuhQyp9GisksoBYDyG_p7de9eGDrSfEp7Z_4w4s"/>
+</div>
+<div class="col-span-12 md:col-span-8 aspect-[16/9] hard-border overflow-hidden group">
+<img alt="Project Delta" class="w-full h-full object-cover grayscale transition-transform duration-700 group-hover:scale-110" data-alt="A wide-angle view of a bespoke luxury lounge featuring low-profile black leather furniture and a floor-to-ceiling library. The room uses a tonal layering technique with various shades of gray and black textures. The design is strictly black and white, achieving depth through material contrast rather than color. Large windows frame a minimalist courtyard garden, blending interior and exterior spaces." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6Wyow13LCOxRn6U7cwV_G6AVRDHyIRq0rbEwYsCGektTWS-N5qPj1KeuYDMmucl_7naBJt2XILuPtHd2e1274HZfooXPqNOOsF5Y2HmHLr7rz_ETgSTBMA0oPv7ofNGMVIn_5NDkT5EyOXFnXsPAd5M_4EME6t0r4cEQUVjvioOTTkwKENZhs1bF2qwG1ObGOXOjYliSGGis_0F4m4ZSCnjcxxmrhnaJr5-6MkLXthhW5m8RIPVMHFHXbzIHi619t54PIo8YgF3s"/>
+</div>
+</div>
+</section>
+<!-- Services Section (Typographic) -->
+<section class="py-section-gap bg-black text-white px-margin-edge">
+<div class="max-w-container-max mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-start border-b border-zinc-800 pb-12 mb-12">
+<h2 class="font-display-xl text-headline-lg uppercase mb-8 md:mb-0">DISCIPLINES</h2>
+<p class="max-w-md font-body-lg text-body-lg text-zinc-400">Our practice operates at the intersection of structural engineering and poetic inhabitation.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-zinc-800">
+<div class="py-12 md:py-0 md:pr-12">
+<span class="font-label-caps text-label-caps text-zinc-500 mb-6 block">01 /</span>
+<h4 class="font-headline-md text-headline-md mb-6 uppercase">RESIDENTIAL</h4>
+<p class="font-body-md text-body-md text-zinc-400">Transforming private dwellings into sanctuaries of light and geometry. We focus on the daily choreography of movement within the home.</p>
+</div>
+<div class="py-12 md:py-0 md:px-12">
+<span class="font-label-caps text-label-caps text-zinc-500 mb-6 block">02 /</span>
+<h4 class="font-headline-md text-headline-md mb-6 uppercase">COMMERCIAL</h4>
+<p class="font-body-md text-body-md text-zinc-400">Defining brand identity through physical space. Our commercial environments are designed to command authority and foster focused collaboration.</p>
+</div>
+<div class="py-12 md:py-0 md:pl-12">
+<span class="font-label-caps text-label-caps text-zinc-500 mb-6 block">03 /</span>
+<h4 class="font-headline-md text-headline-md mb-6 uppercase">BESPOKE</h4>
+<p class="font-body-md text-body-md text-zinc-400">Custom furniture and installation pieces that complete the architectural narrative. Every detail is mathematically aligned to the master plan.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Philosophy Section -->
+<section class="py-section-gap px-margin-edge max-w-container-max mx-auto text-center">
+<div class="max-w-4xl mx-auto">
+<span class="font-label-caps text-label-caps text-secondary mb-12 block tracking-widest uppercase">OUR PHILOSOPHY</span>
+<blockquote class="font-headline-lg text-[64px] leading-tight mb-12">
+                    "SPACE IS NOT A VOID TO BE FILLED, BUT A VOLUME TO BE SCULPTED."
+                </blockquote>
+<div class="w-24 h-[1px] bg-black mx-auto mb-12"></div>
+<p class="font-body-lg text-body-lg text-secondary">
+                    Architecture is the learned game, correct and magnificent, of forms assembled in the light. Our work is a silent dialogue between material weight and the weightlessness of the human spirit.
+                </p>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="px-margin-edge pb-section-gap max-w-container-max mx-auto">
+<div class="hard-border p-16 flex flex-col md:flex-row justify-between items-center gap-12 bg-white">
+<div class="text-center md:text-left">
+<h2 class="font-headline-lg text-headline-lg uppercase mb-4">BEGIN THE DIALOGUE</h2>
+<p class="font-body-md text-body-md text-secondary">Let us define your next spatial narrative.</p>
+</div>
+<div class="flex flex-col gap-4 w-full md:w-auto">
+<button class="bg-black text-white px-12 py-4 font-label-caps text-label-caps uppercase hover:bg-white hover:text-black border border-black transition-none">
+                        START A PROJECT
+                    </button>
+<button class="bg-white text-black px-12 py-4 font-label-caps text-label-caps uppercase hover:bg-black hover:text-white border border-black transition-none">
+                        DOWNLOAD BROCHURE
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Shell -->
+<footer class="w-full px-16 py-12 flex flex-col md:flex-row justify-between items-end gap-8 bg-white dark:bg-zinc-950 border-t border-black dark:border-white">
+<div class="flex flex-col gap-4">
+<div class="text-lg font-bold tracking-widest text-black dark:text-white uppercase">ARCHITEXTURE</div>
+<div class="font-serif tracking-widest text-[10px] uppercase text-zinc-600 dark:text-zinc-400">
+                © 2024 ARCHITEXTURE STUDIO. ALL RIGHTS RESERVED.
+            </div>
+</div>
+<div class="flex flex-col md:flex-row gap-8 items-end md:items-center">
+<div class="flex gap-6">
+<a class="font-serif tracking-widest text-[10px] uppercase text-zinc-600 dark:text-zinc-400 hover:line-through transition-none" href="#">INSTAGRAM</a>
+<a class="font-serif tracking-widest text-[10px] uppercase text-zinc-600 dark:text-zinc-400 hover:line-through transition-none" href="#">LINKEDIN</a>
+<a class="font-serif tracking-widest text-[10px] uppercase text-zinc-600 dark:text-zinc-400 hover:line-through transition-none" href="#">JOURNAL</a>
+<a class="font-serif tracking-widest text-[10px] uppercase text-zinc-600 dark:text-zinc-400 hover:line-through transition-none" href="#">LEGAL</a>
+</div>
+</div>
+</footer>
+</body></html>
